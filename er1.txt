@@ -1,0 +1,25 @@
+PS C:\Users\DigiL\Documents\DSF\pyscript_6> & C:/Users/DigiL/AppData/Local/Programs/Python/Python39/python.exe c:/Users/DigiL/Documents/DSF/pyscript_6/dfs_wrapper.py
+C:\Users\DigiL\AppData\Local\Programs\Python\Python39\lib\site-packages\gym\spaces\box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+connecting to Carla server...
+INFO:  Found the required file in cache!  Carla/Maps/Nav/Town10HD_Opt.bin 
+Carla server connected!
+C:\Users\DigiL\AppData\Local\Programs\Python\Python39\lib\site-packages\gym\utils\passive_env_checker.py:174: UserWarning: WARN: Future gym versions will require that `Env.reset` can be passed a `seed` instead of using `Env.seed` for resetting the environment random number generator.
+  logger.warn(
+C:\Users\DigiL\AppData\Local\Programs\Python\Python39\lib\site-packages\gym\utils\passive_env_checker.py:187: UserWarning: WARN: Future gym versions will require that `Env.reset` can be passed `options` to allow the environment initialisation to be passed additional information.
+  logger.warn(
+Traceback (most recent call last):
+  File "c:\Users\DigiL\Documents\DSF\pyscript_6\dfs_wrapper.py", line 45, in <module>
+    obs = env.reset()
+  File "C:\Users\DigiL\AppData\Local\Programs\Python\Python39\lib\site-packages\gym\wrappers\order_enforcing.py", line 42, in reset
+    return self.env.reset(**kwargs)
+  File "C:\Users\DigiL\AppData\Local\Programs\Python\Python39\lib\site-packages\gym\wrappers\env_checker.py", line 45, in reset
+    return env_reset_passive_checker(self.env, **kwargs)
+  File "C:\Users\DigiL\AppData\Local\Programs\Python\Python39\lib\site-packages\gym\utils\passive_env_checker.py", line 192, in env_reset_passive_checker
+    result = env.reset(**kwargs)
+  File "c:\users\digil\gym-carla\gym_carla\envs\carla_env.py", line 255, in reset
+    return self._get_obs()
+  File "c:\users\digil\gym-carla\gym_carla\envs\carla_env.py", line 496, in _get_obs
+    point_cloud.append([location.x, location.y, -location.z])
+AttributeError: 'LidarDetection' object has no attribute 'x'
+PS C:\Users\DigiL\Documents\DSF\pyscript_6> 
